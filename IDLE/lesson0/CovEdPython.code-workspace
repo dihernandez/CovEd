@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../intro"
+		},
+		{
+			"path": "../../lesson1"
+		}
+	],
+	"settings": {}
+}

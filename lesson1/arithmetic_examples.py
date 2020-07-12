@@ -27,4 +27,3 @@ def check_deal_gas_law(P,V,n,R,T):
     return P*V == n*R*T 
 
 print(multiply_numbers(9,7) == multiply_by_addition(9,7))
-

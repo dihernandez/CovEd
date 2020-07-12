@@ -28,8 +28,7 @@ def get_all_evens (n):
 print(get_all_evens(19))
 
 # using modulus, we can essentially create a numerical reprentation of base n (where n is any integer)
-# [1,1,1] == [5^2 + 5^1 + 5^0] = 30
-# [5,5] = 30
+# [1,1,0] == [5^2 + 5^1 + 5^0] = 30
 # remainder = n%5 
 # total = 30 + remainder
 ''' I borrowed the following algorithm from https://bradfieldcs.com/algos/stacks/converting-number-bases/'''
@@ -40,9 +39,11 @@ def base_b(base, number):
         rem = number % base
         remainders.append(rem)
         number = number // base
-    while remainders:
+    while len(remainders) > 0:
         places.append(remainders.pop())
 
-    return places[:-1], places[-1]
+    return places
 
-print(base_b(5,73))
+print(base_b(5,32))
+
+#exercise- foobar

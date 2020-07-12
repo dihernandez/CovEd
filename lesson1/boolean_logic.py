@@ -15,6 +15,11 @@ print("---------------------------")
 print(True and False)
 print(True or False)
 
+print(False and False)
+print(False or False)
+
+print(True and True)
+print(True or True)
 print("---------------------------")
 print("is within")
 def is_within(n, a, b):

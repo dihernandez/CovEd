@@ -2,7 +2,7 @@
 var1 = 8
 var2 = bin(var1)
 
-print("var1 is ", var1, "var2 is ", var2, "are equal? ", var1 == var2)
+print("var1 is ", var1, "var2 is ", var2, "are equal? ", var1 == var2) #why are they not equal?
 
 # this is called a bit shift operation, mul1 should equual mul2
 mul1 = var1*2

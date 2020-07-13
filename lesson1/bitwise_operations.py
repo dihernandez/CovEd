@@ -8,7 +8,7 @@
 # # what is the difference between the following:
 # myint1 = int(mybyte1)
 # myint2 = int(mybyte2)
-# if myint1 == 0 and myint2 == 9:
+# if myint1 == 0 and myint2 == 0:
 #     print("shouldn't print")
 
 ''' this illustrates the AND truth table'''

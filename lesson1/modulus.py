@@ -1,6 +1,4 @@
 import math
-#exercie: write foobar
-
 #in python, division automatically rounds down
 
 print(9/2)
@@ -46,4 +44,6 @@ def base_b(base, number):
 
 print(base_b(5,32))
 
-#exercise- foobar
+# challenge exercise: write foobar
+# For a given number n, have the function print out every number from 0 to n with the following exceptions:
+# if the number is divisible by 3, print out "foo", if it is divisible by 5, print out "bar", if it is divisible by both, print out "foobar"

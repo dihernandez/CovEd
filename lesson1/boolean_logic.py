@@ -38,6 +38,7 @@ def short_circuit():
     if(True or int2 < 0): # does int2 >0 have to be evaluated?
         print("short circuit guaranteed")
 short_circuit()
+#question - can we have  a short circuit with an and comparator? Why or why not?
 
 # Demorgan's law states fundamentals of boolean algebra
 def demorgan():

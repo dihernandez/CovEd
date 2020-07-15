@@ -8,8 +8,16 @@ def using_math():
     print("ceiling function", math.ceil(myfloat1))
 
     myfloat2 = 9.7999999999999
-    print("is close is ", math.isclose(myfloat1, myfloat2))
+   # print("is close is ", math.isclose(myfloat1, myfloat2))
 
 using_math()
 
+
 # at this point you should ask me to solve a reasonably simple math question programmatically and I will attempt a solution
+# you should follow along on your own computer
+
+def william():
+    a = math.floor(7.5) + 2
+    return a
+
+print(william())

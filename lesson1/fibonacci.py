@@ -5,6 +5,7 @@ def fib(n):
 	if n < 2:
 		return n
 	else:
+		print(fib(n -1) + fib(n-2))
 		return fib(n -1) + fib(n-2)
 
 
@@ -17,6 +18,7 @@ def fib2(n):
 		return fib_seen[n-1]
 	else:
 		temp = fib2(n -1) + fib2(n - 2)
+		print(temp)
 		fib_seen.append(temp)
 		return temp
 

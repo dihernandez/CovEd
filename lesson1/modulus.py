@@ -16,14 +16,14 @@ print(9./2 == 9/2)
 # this remainder can be very useful
 # this modulus operator, %, allows us to access the remainder
 
-def get_all_evens (n):
+def get_all_evens(n):
     evens = []
     for i in range(n):
         if i % 2 == 0:
             evens.append(i)
     return evens
 
-print(get_all_evens(19))
+print(get_all_evens(7))
 
 # using modulus, we can essentially create a numerical reprentation of base n (where n is any integer)
 # [1,1,0] == [5^2 + 5^1 + 5^0] = 30

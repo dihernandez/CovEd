@@ -5,11 +5,6 @@ mylist2 = [0]*9
 print("These are example uninitialized and initialied lists")
 print(mylist0, mylist1, mylist2)
 
-# a list can contain any combination of valid data types
-print("---------------------------------")
-vallist = ['a',2 , 2.40,"d", []]
-for val in vallist:
-    print(val)
 print("---------------example two dimensional list------------------")
 two_dimensional_list1 = [[0]*3]*3
 two_dimensional_list1[2][0] = "hello"

@@ -1,6 +1,5 @@
 # So why use strings? Well, text is very useful as inputs and outputs of code
 
-#!/usr/bin/python3
 
 def read_a_file():
     lines_of_alice = []

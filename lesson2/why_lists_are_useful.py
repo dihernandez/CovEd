@@ -6,7 +6,7 @@ vallist = ['a',2 , 2.40,"d", []]
 for val in vallist:
     print(val)
 
-# we can iterate over the list itself but also over the indeces
+# we can iterate over the list itself but also over the indices
 for idx, val in enumerate(vallist):
     print(idx, val)
 

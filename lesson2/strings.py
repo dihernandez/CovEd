@@ -19,4 +19,4 @@ print(mystr0)
 
 # notice a lack of operations such as append and pop https://docs.python.org/3/library/string.html
 
-# So why use strings? 
+

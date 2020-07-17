@@ -36,6 +36,8 @@ print("1 1 gives ",bool1 and bool2)
 
 mybyte1 = 0b11001001
 mybyte2 = 0b00110110
+
+
 print("mybyte1 is ", bin(mybyte1), "mybyte2 is", bin(mybyte2))
 
 print("conditional and ", mybyte1 and mybyte2, bin(mybyte1 and mybyte2))

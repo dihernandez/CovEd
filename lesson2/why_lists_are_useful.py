@@ -17,7 +17,9 @@ print(my_sorted_list)
 print(my_sorted_list[::-1])
 
 print(my_sorted_list[1:len(my_sorted_list)])
+print(my_sorted_list[1:-1])
 print(my_sorted_list[1:])
+
 
 #lots of helpful methods available https://docs.python.org/3/tutorial/datastructures.html
 list_appendable =[]

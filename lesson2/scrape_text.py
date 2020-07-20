@@ -9,12 +9,8 @@ def read_a_file():
             line = f.readline()
             lines_of_alice.append(line)
 
-    #     
-    #     for line in contents:
-    #         lines_of_alice.append(line)
     f.closed  
     return lines_of_alice  
-    # print(lines_of_alice)
 
 def modify_data(lines):
     new_output = []
@@ -24,7 +20,7 @@ def modify_data(lines):
             #print("idx and char are ", idx, char)
             if char == 'a':
                # print("char == a", char == 'a')
-                new_output.append('Z')
+                new_output.append('RRRR')
             else:
                 new_output.append(char)
     return "".join(new_output)

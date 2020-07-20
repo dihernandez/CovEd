@@ -10,5 +10,5 @@ with open("airtravel.csv", "r") as csvfile:
             pass
         else:
             total_number_flights_per_month[row[0]] = int(row[1]) + int(row[2]) + int(row[3])
-
+        
 print(total_number_flights_per_month)

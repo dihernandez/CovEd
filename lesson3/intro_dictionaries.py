@@ -33,11 +33,22 @@ for key, value in mydict1.items():
     print(key, value)
  # or
 for key in mydict1.keys():
-    print(key, mydict1[value])
-# or
-for value in mydict1.values():
-    print(sorted(value)) # why doesn't this sort the keys?
+    print(key, mydict1[key])
 
+print("-----------sorted -----------")
+print(mydict1.keys()) # there is no access method like slicing in lists. Why? dictionaries do not preserve order
+print(mydict1.values())
+print(sorted(mydict1)) # so what does this even mean?
+
+print("----------nesting----------------------") 
+# keys must be mutable, values can me immutable
+my_nested_dict = {"a":{1:['a']}}
+print(my_nested_dict)
+# why wont this work:
+#my_nested_dict2 = {[9]:{1:['a']} }
+print("-------------keys----------------------")
+mydict2 = {"a":0,"a":1,"a":3} # what do you expect to happen here?
+print(mydict2)
 print("-----------------Exercise--------------")
 #exercise: use a dictionary to map the characters that appear in a string to the number of appearences. Find the most frequently used character.
 

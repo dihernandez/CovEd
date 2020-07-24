@@ -67,17 +67,18 @@ print("-----------------Exercise--------------")
 
 
 # (a) solution
-# def find_most_used_character(input_string):
-#     characters = {}
-#     for c in input_string:
-#         if c not in characters.keys():
-#            characters[c] = 1
-#         else:
-#             characters[c] += 1
-#     max_count = 0
-#     for key in characters.keys():
-#         if characters[key] > max_count:
-#             max_count = characters[key]
-#     return max_count
+def find_most_used_character(input_string):
+    characters = {}
+    for c in input_string:
+        if c not in characters.keys():
+           characters[c] = 1
+        else:
+            characters[c] += 1
+    max_count = 0
+    for key in characters.keys():
+        if characters[key] > max_count:
+            max_count = characters[key]
+    return max_count
 
-# why can't I just use sorted(characters.values())?
+# why would I want to use my algorithmvs the following : max(sorted(characters.values()))
+print(find_most_used_character("asdfada"))

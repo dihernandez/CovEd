@@ -24,8 +24,29 @@ print(mytuple2[::-1])
 del mytuple1 # what do you expect to happen if I run print(mytuple1) ?# 
 
 #why use tuples? They are faster 
-# when you want to use multiple elements in a dictionary key:
+# when you want to use multiple elements in a dictionary key: since keys must be immutable
 mydict1 = {('a',9):"some value", ("b",10):"some other value"}
 print(mydict1)
 #but this doesn't work:
 #mydict1 = {['a',9]:"some value", ["b", 10]:"some other value"}
+
+# packing and unpacking
+def some_function():
+    var1 = 0
+    var2= "A"
+    var3 = 9.0
+    return (var1, var2, var3)
+outside_var1, outside_var2, outside_var3 = some_function()
+print(outside_var1, outside_var2, outside_var3)
+
+
+# where hace we seen this before?
+print("-----------------dict example--------------")
+mydict2 = {1:'a', 2:'b', 3:'c'}
+
+for key, value in mydict2.items():
+    print(key, value)
+print("-----------------list example--------------")
+mylist1 = ["j","k", "l"]
+for index, value in enumerate(mylist1):
+    print(index, value)

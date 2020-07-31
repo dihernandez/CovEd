@@ -35,6 +35,9 @@ for key, value in mydict1.items():
 for key in mydict1.keys():
     print(key, mydict1[key])
 
+for v in mydict1.values():
+    print(v)
+
 print("-----------sorted -----------")
 print(mydict1.keys()) # there is no access method like slicing in lists. Why? dictionaries do not preserve order
 print(mydict1.values())
@@ -43,42 +46,10 @@ print(sorted(mydict1)) # so what does this even mean?
 print("----------nesting----------------------") 
 # keys must be mutable, values can me immutable
 my_nested_dict = {"a":{1:['a']}}
+print(my_nested_dict["a"][1])
 print(my_nested_dict)
 # why wont this work:
 #my_nested_dict2 = {[9]:{1:['a']} }
 print("-------------keys----------------------")
 mydict2 = {"a":0,"a":1,"a":3} # what do you expect to happen here?
 print(mydict2)
-print("-----------------Exercise--------------")
-#exercise: use a dictionary to map the characters that appear in a string to the number of appearences. Find the most frequently used character.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# (a) solution
-def find_most_used_character(input_string):
-    characters = {}
-    for c in input_string:
-        if c not in characters.keys():
-           characters[c] = 1
-        else:
-            characters[c] += 1
-    max_count = 0
-    for key in characters.keys():
-        if characters[key] > max_count:
-            max_count = characters[key]
-    return max_count
-
-# why would I want to use my algorithmvs the following : max(sorted(characters.values()))
-print(find_most_used_character("asdfada"))

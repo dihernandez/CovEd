@@ -3,6 +3,10 @@ mytuple1 = (0,2,2,2,0)
 print(mytuple1)
 # notice there is no mytuple1.set()
 # but we can do 
+mylist1 = [0,2,2,2,0]
+mylist1.extend([0,2,2,2,0])
+
+print(mylist1)
 mytuple1 = mytuple1 + mytuple1
 #what do you think this will do?
 print(mytuple1)
@@ -40,7 +44,7 @@ outside_var1, outside_var2, outside_var3 = some_function()
 print(outside_var1, outside_var2, outside_var3)
 
 
-# where hace we seen this before?
+# where have we seen this before?
 print("-----------------dict example--------------")
 mydict2 = {1:'a', 2:'b', 3:'c'}
 

@@ -1,3 +1,6 @@
+
+import string
+
 # So why use strings? Well, text is very useful as inputs and outputs of code
 
 
@@ -12,13 +15,15 @@ def read_a_file():
     f.closed  
     return lines_of_alice  
 
+
+
 def modify_data(lines):
     new_output = []
     for line in lines:
         #print("line is ", line)
         for idx, char in enumerate(line):
             #print("idx and char are ", idx, char)
-            if char == 'a':
+            if char in string.ascii_lowercase:
                # print("char == a", char == 'a')
                 new_output.append('RRRR')
             else:

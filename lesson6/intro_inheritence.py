@@ -13,8 +13,7 @@ class SimpleParent:
         print(self.a)
 
 class SimpleChild(SimpleParent):
-    def print_a(self):
-        print(self.a)
+    pass
 
 parent = SimpleParent(10)
 child = SimpleChild(8)
@@ -52,9 +51,6 @@ overloading_child.in_parent() # why does this work?
 overloading_parent.print_a_b()
 overloading_child.print_a_b_c()
 
-
-
-
 class Base1:
     def __init__(self):
         self.a = "a"
@@ -78,39 +74,3 @@ class MultipleInheritance(Base1, Base2):
 
 multiple_inheritance = MultipleInheritance()
 multiple_inheritance.print_self()
-
-
-
-class TestClass:
-    def __init__(self, param1, param2):
-        self.param1 = param1
-        self.param2 = param2
-
-    def getParams(self):
-        return (self.param1, self.param2)
-    
-    def modifyParam1(self, new_value):
-        self.param1 = new_value
-
-    def modifyParam2(self, new_value):
-        self.param2 = new_value
-
-    # what would happen here? Why?
-    # def modifyParam2(new_value):
-    #     param2 = new_value
-
-
-test_object1 = TestClass(0,0)
-test_object2 = TestClass("b","c")
-print(test_object2) #why do we get this?
-print(test_object1.getParams())
-test_object1.modifyParam1(1)
-test_object1.modifyParam2(3)
-print(test_object1.getParams()) #what will this print out?
-
-# what about this?
-print(test_object1.param1)
-print(test_object1.param2)
-
-#why is getParams better?
-#what is the difference between a function and a method?

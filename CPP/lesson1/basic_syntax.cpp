@@ -57,7 +57,7 @@ void looping(int range) {
         }
     }
 
-    cout << "do while loops: "  
+    cout << "do while loops: ";
 }
 
 int main(){

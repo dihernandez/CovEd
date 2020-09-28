@@ -12,13 +12,13 @@ string func2(){
 }
 
 
-void conditionalStatement(int i){
+void conditionalStatements(int i){
     if(i > 0 && i < 10){
         cout << "i is small" << endl;
     } 
     else if (i > 10 && i < 100) {
-        cout << "is middle" << endl;
-    } else if( i >10 || i < 0 ){
+        cout << "i is middle" << endl;
+    } else if( i >= 100 || i < 0 ){
         cout << "i is out of range" << endl;
     } 
 
@@ -39,25 +39,39 @@ void looping(int range) {
 
     cout << "while loop basic: " << endl;
     int idx {0};
-    while(idx < range){
+    while(idx <= range){ // note if I did idx < range, this loop would be different fromm the one below
         idx++;
         cout << idx << " ";
     } 
     cout << endl;
+
+    bool initial_val = false;
+    cout << "do while loops: " << endl;
+    do {
+        cout << "in  do while loop" << endl;
+    } while (initial_val == true);
+
+    while (initial_val == true)
+    {
+       cout << "this should not print anything" << endl;
+    }
+    
+
+
     cout << "while loop with conditional" << endl;
     idx = 0;
 
     while(true) {
         idx += 1;
         cout << idx << " ";
-        if(idx >= 5) {
+        if(idx >= range) {
             cout << endl;
             cout << "breaking out of loop " << endl;;
             break;
         }
     }
 
-    cout << "do while loops: ";
+
 }
 
 int main(){
@@ -66,6 +80,10 @@ int main(){
 
     cout << func2_result  << endl;
 
+    conditionalStatements(9);
+    conditionalStatements(50);
+    conditionalStatements(-9);
+    conditionalStatements(100);
     looping(6);
     return 0;
 }

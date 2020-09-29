@@ -2,10 +2,6 @@
 
 using namespace std;
 
-void func1(){
-    cout << "This is the most basic function" << endl;
-}
-
 int main(int argc, char **argv) {
 
     cout << "This is the most complete form of main" << endl;

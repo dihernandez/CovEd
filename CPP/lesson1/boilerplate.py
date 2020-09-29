@@ -4,8 +4,7 @@ filename = sys.argv[1] + ".cpp"
 
 target = open(filename, 'w') 
 
-boilerplate = 
-'''
+boilerplate = '''
 #include <iostream>
 
 using namespace std;

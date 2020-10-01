@@ -22,22 +22,29 @@ int main() {
 
     const char *array_of_strings2[ARR_SIZE] {"this ", "is ", "a ", "2"};
     const char *array_of_strings_uninitialized[ARR_SIZE];
-
+    int *array_of_ints_uninitialized[ARR_SIZE];
     for (int i = 0; i < ARR_SIZE; i++) {
          // what happens if array_of_strings is smaller than ARR_SIZE?
         // cout << " word is " << *(array_of_strings1 + i) << endl;
-            cout << " word is " << *(array_of_strings2 + i) << endl;
-            //cout << "this should cause a runtime error" << *(array_of_strings_uninitialized + i) << endl;
+            cout << " word is " << *(array_of_strings2 + i) << "at address " << (array_of_strings2 + i) << endl;
+            cout << "this should print the addresses for the initialized address space " << array_of_strings_uninitialized + i<< endl;
+            //cout << " I is at segfault " << i << endl;
+            //cout << "this should work" << array_of_strings_uninitialized[i] << endl;
+            cout << "this should cause a runtime error " << *(array_of_strings_uninitialized + i) << endl; // segfault is an illegal memory access,
+            // this happens because we are trying to dereference a const * (constant pointer) to a garbage value- could segfault because this value could point to invalid or unmapped memory
+            // could shoot yourself in the foot here, say for example the garbage value is a valid pointer - unexpected behaviour 
+
+            cout << " ints are " << (long long)(*(array_of_ints_uninitialized + i)) << endl;
         }
 
-    int array_of_ints_uninitialized[ARR_SIZE];
+    int array_of_ints_uninitialized1[ARR_SIZE];
 
     for(int i = 0; i < ARR_SIZE; i++) {
-            array_of_ints_uninitialized[i] = i*10;
+            array_of_ints_uninitialized1[i] = i*10;
     }
 
     for(int i = 0; i < ARR_SIZE; i++) {
-            cout << " ints are " << *(array_of_ints_uninitialized + i) << endl;
+            cout << " ints are " << *(array_of_ints_uninitialized1 + i) << endl;
     }
 
     return 0;

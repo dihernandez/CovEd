@@ -8,17 +8,25 @@ void func1(){
 
 
 string func2(){
-    return "Thi is how you return a value from a function";
+    return "This is how you return a value from a function";
 }
 
+void declaringVariables() {
+
+    int a {9};
+    cout << "a is " << a << endl;
+    a = 10;
+    cout << "a is " << a << endl;
+
+}
 
 void conditionalStatements(int i){
-    if(i > 0 && i < 10){
+    if(i > 0 && i < 10){ // and
         cout << "i is small" << endl;
     } 
-    else if (i > 10 && i < 100) {
+    else if (i > 10 && i < 100) { // and
         cout << "i is middle" << endl;
-    } else if( i >= 100 || i < 0 ){
+    } else if( i >= 100 || i < 0 ){  // or
         cout << "i is out of range" << endl;
     } 
 
@@ -75,11 +83,13 @@ void looping(int range) {
 }
 
 int main(){
+
     func1();
     string func2_result = func2();
 
     cout << func2_result  << endl;
 
+    declaringVariables();
     conditionalStatements(9);
     conditionalStatements(50);
     conditionalStatements(-9);

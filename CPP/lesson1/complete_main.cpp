@@ -11,7 +11,7 @@ int main(int argc, char **argv) {
     cout << "argv is the list of arguments passed in. Argument 0 is the program name. This is an addres and the following is argv " << argv << endl;
 
     for(int i = 0; i < argc; i++) {
-        cout << "argv[i] is " <<  argv[i] << endl;
+        cout << "argv[i]i is " << "for i " << i << " " << argv[i] << endl;
     }
 
     return 0;

@@ -35,6 +35,33 @@ int main() {
 
     map2.insert(pair<char, int>('g', 100));
     map2.insert(pair<char, int>('z', 200));
-    
+    cout << "printing map 2 after inserts " << endl;  
+    printCharIntMap(map2);
+
+
+
+    map2.erase('a');
+    cout << "printing map 2 after erase by key" << endl;  
+    printCharIntMap(map2);
+
+    map<char, int>::iterator it_map2 = map2.begin(); // note: I have to start my iterator to the beginning after removing the first element. Otherwise I'll get a segfault
+
+
+    cout << "map2 is of size " << map2.size() << endl;
+
+    map2.erase(it_map2);
+    cout << "printing map 2 after erase by iterator single " << endl; 
+    printCharIntMap(map2);
+
+    it_map2 = map2.begin(); // note: I have to reset my iterator to the beginning because I removed the first element. Otherwise I'll get a segfault
+    map<char, int>::iterator it_map3 = it_map2;
+    it_map3++;
+    it_map3++; //note I cannot just do it_map3+=2 with a map because it is not random access
+    map2.erase(it_map2, it_map3);
+
+    cout << "printing map 2 after erase by iterator range " << endl;  
+    printCharIntMap(map2);
+
+    cout << "finally, I can access an element like this " << map2['g'] << endl;
     return 0;
 }

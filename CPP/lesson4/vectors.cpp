@@ -37,13 +37,10 @@ int main() {
 
             cout << strings[i] << " " << ints[i] << endl;
     }
-
+    
     printVectorUsingIterator<vector<int>>(ints);
 
     printVectorUsingAuto<vector<string>>(strings);
-
-
-
 
     return 0;
 }

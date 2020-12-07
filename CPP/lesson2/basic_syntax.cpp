@@ -3,8 +3,8 @@
 using namespace std;
 
 void func1(){
-    cout << "This is the most basic function" << endl;
-}
+   cout << "This is the most basic function" << endl;
+} 
 
 
 string func2(){
@@ -23,7 +23,12 @@ void declaringVariables() {
     c = 12;
     d = 89;
     cout << "c is " << c << " d is " << d << endl;
+    int e = 182, f = 0, g = 7;
+    int h {0}, i {8}, j {18};
+    cout << "e is " << e << " f is " << f << " g is "  << g << endl;
+    cout << "e is " << h << " f is " << i << " g is "  << j << endl;
 }
+
 
 void conditionalStatements(int i){
     if(i > 0 && i < 10){ // and
@@ -33,13 +38,13 @@ void conditionalStatements(int i){
         cout << "i is middle" << endl;
     } else if( i >= 100 || i < 0 ){  // or
         cout << "i is out of range" << endl;
-    } 
+    }
 
 }
 
 void looping(int range) {
-    cout << "standard for loop: " << endl;;
-    for(int i = 0; i < range; i++) {
+    cout << "standard for loop: " << endl;
+    for(int i = 0; i < range; i+=2) {
         cout << i << " ";
     }
     cout << endl;
@@ -55,7 +60,7 @@ void looping(int range) {
     while(idx <= range){ // note if I did idx < range, this loop would be different fromm the one below
         idx++;
         cout << idx << " ";
-    } 
+    }
     cout << endl;
 
     bool initial_val = false;
@@ -94,11 +99,11 @@ int main(){
 
     cout << func2_result  << endl;
 
-    declaringVariables();
-    conditionalStatements(9);
-    conditionalStatements(50);
-    conditionalStatements(-9);
-    conditionalStatements(100);
-    looping(6);
+    //declaringVariables();
+    // conditionalStatements(9);
+    // conditionalStatements(50);
+    // conditionalStatements(-9);
+    // conditionalStatements(100);
+    //looping(6);
     return 0;
 }

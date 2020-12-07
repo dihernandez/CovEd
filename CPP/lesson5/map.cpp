@@ -11,14 +11,29 @@ void printCharIntMap(map<char,int> map_to_print){
         cout << endl;
     }
 }
+
+struct MyStruct1 {
+    int val1;
+    char val2;
+};
+
+
+struct MyStruct2 {
+    int val1;
+    char val2;
+} mystruct2;
+
 // Key is accessed as map->first, vlaue as map->second
 int main() {
+    map<MyStruct1,MyStruct2> map0;
+
     map<char,int> map1;
     char map_keys[] = {'a','b','c','d'};
     int map_values[] = {1,2,3,4};
     for(int i = 0; i < sizeof(map_keys)/sizeof(char); i++) {
         map1[map_keys[i]] = map_values[i];
     }
+
     cout << "printing map 1 " << endl;
     printCharIntMap(map1);
 

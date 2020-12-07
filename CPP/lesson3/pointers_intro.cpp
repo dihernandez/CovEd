@@ -29,7 +29,7 @@ int main() {
             cout << " word is " << *(array_of_strings2 + i) << " at address " << (array_of_strings2 + i) << endl;
             cout << "this should print the addresses for the initialized address space " << array_of_strings_uninitialized + i<< endl;
             //cout << " I is at segfault " << i << endl;
-            //cout << "this should work" << array_of_strings_uninitialized[i] << endl;
+            //cout << "this shouldn't work" << array_of_strings_uninitialized[i] << endl;
            // cout << "this should cause a runtime error " << *(array_of_strings_uninitialized + i) << endl; // segfault is an illegal memory access,
             // this happens because we are trying to dereference a const * (constant pointer) to a garbage value- could segfault because this value could point to invalid or unmapped memory
             // could shoot yourself in the foot here, say for example the garbage value is a valid pointer - unexpected behaviour 

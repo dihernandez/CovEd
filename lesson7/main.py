@@ -1,4 +1,4 @@
-import to_import as exModule
+import to_import as exModule # renames import -> your name
 import different_folder.to_import_hierarchy as hierarchy
 import sys
 

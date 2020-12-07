@@ -1,6 +1,6 @@
 #include <iostream>
 #include <array>
-
+#include <string>
 using namespace std;
 
 int main() {
@@ -74,7 +74,8 @@ int main() {
     for(auto el: arr5) {
         cout << el << endl;
     }
-
-
+    auto mystr = "jafk";
+    string mystr2 = "jafk";
+    cout << mystr << (mystr == mystr2) << endl;
     return 0;
 }

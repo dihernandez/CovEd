@@ -21,11 +21,15 @@ int main() {
     cout <<"Printing set 1" << endl;
     printIntSet(set1);
 
+
     set<int> set2(set1.begin(), set1.end());
     cout <<"Printing set 2" << endl;
     printIntSet(set2);
+
+    cout << endl;
     set2.insert(4);
     set2.insert(5);
+    printIntSet(set2);
     set<int>::iterator lb = set2.lower_bound(2);
     set<int>::iterator ub = set2.upper_bound(4);
     set2.erase(lb, ub);

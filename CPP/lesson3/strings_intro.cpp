@@ -6,8 +6,8 @@ using namespace std;
 int main() {
     string my_string = "abc";
     cout << my_string << endl;
-    my_string += "def";
-    my_string.append("ghi");
+   my_string += "def";
+    my_string.append("ghi ");
     cout << my_string << endl;
 
     string my_substring = my_string.substr(3,my_string.length());
@@ -23,7 +23,7 @@ int main() {
     string copy = my_string;
     cout << copy << endl;
     copy.clear();
-    cout << "printing copy again" << copy << endl; 
+    cout << "printing copy again" << copy.length() << endl; 
 
     cout << "you can access a character like this " << endl;
     for(int i = 0; i < my_string.length(); i++) {
@@ -42,6 +42,7 @@ int main() {
     string s2 = "abc";
     cout << "are strings same ? " << (s1 == s2) << " compare " <<  !s1.compare(s2) <<  endl; // compare is 0 when equal
 
+    cout << "mystring is " << my_string << endl;
     cout << "find substring " << my_string.find(s1) << endl;
     cout << "find substring " << my_string.find("abc") << endl; 
     cout << "find substring " << my_string.find("12") << endl; //what's that number?

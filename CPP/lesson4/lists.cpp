@@ -14,7 +14,7 @@ void printListIterator(F list_to_print) {
 
 template <typename F>
 void printListAuto(F list_to_print) {
-    cout << "using auto " << endl;
+    //cout << "using auto " << endl;
     for(auto i : list_to_print) {
         cout << i << " ";
     }
@@ -33,7 +33,6 @@ int main() {
     ints.push_back(1);
     ints.push_back(2);
     ints.push_back(3);
-
 
     printListIterator<list<string>>(strings);
     // doesn't work cout << strings[0] << endl;
@@ -56,12 +55,13 @@ int main() {
     list<int>::iterator it_start, it_end;
     it_start = it_end = ints.begin();
     it_end++;
+
+    ints.erase(it_start, it_end);
+    cout << "After push and erase " << endl;
     ints.push_front(1);
     ints.push_front(2);
     ints.push_front(3);
     ints.push_front(4);
-    ints.erase(it_start, it_end);
-    cout << "After push adn erase " << endl;
     printListAuto<list<int>>(ints);
 
     // operations that are available for lists but not vectors
@@ -74,7 +74,6 @@ int main() {
 
     list<int> ints2 {1,3,5,5,4};
     ints.merge(ints2);
-    cout << "after merge " << endl;
+    cout << "after merge " << endl; // merge requires lists be in numerical order
     printListAuto<list<int>>(ints);
-
 }

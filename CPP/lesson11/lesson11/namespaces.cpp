@@ -1,6 +1,7 @@
 #include "namespaces.h"        
 #include "namespaces_b.h"
 
+
 std::string outer_space::inner_space::Test::makePublic() {
     return color;
 }
@@ -15,6 +16,6 @@ int outer_space::inner_space::standaloneDouble(int a) {
 }
 
 extern void outer_space::inner_space::Foo(int a){
-    std::cout << "here " << std::endl;
+    std::cout << "In Foo" << std::endl;
     std::cout << a << std::endl;
-}    
+} 

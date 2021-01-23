@@ -2,11 +2,13 @@
 #define NAMESPACES
 
 #include <string>
+#include <iostream>
 #include <vector>
 
 namespace outer_space {
     namespace inner_space {
 
+
         struct TestStruct1
         {   
             std::string f1;
@@ -22,11 +24,13 @@ namespace outer_space {
                 std::string makePublic();
         };
 
-    }
+    } // namespace inner_space
 
-}
+} // namespace outer_space
+
 
 namespace other {
+
         struct TestStruct1
         {   
             std::string f1;
@@ -39,9 +43,10 @@ namespace other {
                 std::string color;
             public:
                 Test(std::string color):color(color) {};
-                std::string makePublic();
+                public:std::string makePublic();
+
         };
 
-}
+} // namespace other
 
 #endif // NAMESPACES
